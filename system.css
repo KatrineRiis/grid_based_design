@@ -1717,3 +1717,12 @@ button:hover {
   display: block;
   max-width: 100%;
 }
+
+.opgave_btn {
+  display: block;
+  background-color: var(--color-primary);
+  width: 400px;
+  height: auto;
+  font-size: var(--font-size-lg);
+  margin-top: 2rem;
+}
