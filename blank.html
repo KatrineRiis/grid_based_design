@@ -1,53 +1,385 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="system.css">
     <title>Blank Struktur</title>
 </head>
-<body>
+
+<body id="top">
     <!-- Header -->
-    <header class="">
+
+    <header class="navbar">
         <div class="container flex flex-row justify-between items-center p-md">
-            <div class="logo"><a href="/" class="text-decoration-none text-xl">Struktur</a></div>
+            <div class="logo"><img src="./filer/struktur_logo.svg" alt="logo"></div>
             <nav class="hidden visible-md">
-                <a href="#" class="p-r-sm">Navigation 1</a>
-                <a href="#" class="p-r-sm">Navigation 2</a>
-                <a href="#">Navigation 3</a>
+                <a href="#section_1" class="p-r-sm navbtn bold">Anmeldelser</a>
+                <a href="#section_2" class="p-r-sm navbtn bold">Forfatteren</a>
+                <a href="#section_3" class="navbtn bold">Udvalgte billeder</a>
             </nav>
             <div class="navicon hidden-md">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" height="32" width="32">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6" height="32" width="32">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </div>
             <nav class="mobile-menu hidden flex-col justify-center items-center hidden-md">
-                <a href="#" class="p-r-sm">Navigation 1</a>
-                <a href="#" class="p-r-sm">Navigation 2</a>
-                <a href="#">Navigation 3</a>
+                <a href="#section_1" class="p-r-sm navbtn bold mobile_nav">Anmeldelser</a>
+                <a href="#section_2" class="p-r-sm navbtn bold mobile_nav">Forfatteren</a>
+                <a href="#section_3" class="navbtn bold mobile_nav">Udvalgte billeder</a>
             </nav>
         </div>
     </header>
-    <!-- Header slut -->
 
+    <!-- Header slut -->
+    <a href="#top" class="back-to-top">↑</a>
     <!-- Main -->
     <main>
-        <div class="container grid">
-            <div class="col-12 ">
-                <p>Alt godt kommer til den der venter: Tilføj dit indhold her...</p>
+        <div class="container">
+            <div class="grid border-md">
+                <div class="col-12 col-sm-6">
+                    <div class="carousel">
+                        <img class="carousel-image active" src="./filer/kobenhavnerbilleder-sten-simons.jpg"
+                            alt="Sten Simons">
+
+                        <img class="carousel-image" src="./filer/kobenhavnerbilleder_aaben_venstre.jpg" alt="aaben">
+
+
+                        <img class="carousel-image" src="./filer/kobenhavnerbilleder_oppefra.jpg" alt="oppefra">
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 content-center">
+                    <p>
+                        Københavnerbilleder - En guide til
+                        hipster foto af Sten Simons
+                    </p>
+                    <p>
+                        Køb den før din nabo!
+                    </p>
+                    <div>
+                        <a href="https://www.williamdam.dk/">
+                            <button>Køb nu!</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 col-md-4 col-start-3">
+                    <h3>Kort om bogen</h3>
+                    Københavnerbilleder er de danske
+                    streetfotografers bibel: Det er en fusion
+                    mellem et kunstværk og en lærebog.
+                    Bogen gennemgår alle væsentlige
+                    aspekter af streetfotografering fra
+                    grundlæggende teknik til kreative
+                    eksperimenter. Alt sammen krydret
+                    med masser af inspirerende fotos. God
+                    læselyst!
+                </div>
+
+                <div class="col-12 col-start-3 col-md-3 col-md-start-7">
+                    <h3>Quickfacts om
+                        bogen</h3>
+                    <ul class="bulletlist">
+                        <li>Titel: Københavnerbilleder - en guide til hipster foto</li>
+                        <li class="p-t-sm">Forfatter: Sten Simons</li>
+                        <li class="p-t-sm">Antal sider: 344</li>
+                        <li class="p-t-sm">Forlag: Mellem Linjerne</li>
+                        <li class="p-t-sm">ISBN: 987-6-987654-32-1</li>
+                        <li class="p-t-sm">Pris: 399.-</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 col-md-start-5 col-md-4"> <button id="newsletterButton"> TILMELD DIG VORES
+                        NYHEDSBREV!
+                    </button>
+                    <div id="newsletterPopover" class="newsletter-popover"> <button id="closePopover"
+                            class="close-popover">&times;</button>
+                        <h2>Tilmeld dig og få de seneste nyheder!</h2> <input type="email" placeholder="Din email">
+                        <button>Tilmeld</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 col-md-4 col-lg-4 ">
+                    <div class="img_wrapper">
+                        <img class="img_hover" src="./filer/kobenhavnerbilleder_oppefra.jpg" alt="oppefra">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="img_wrapper">
+                        <img class="img_hover" src="./filer/kobenhavnerbilleder_aaben_venstre.jpg" alt="aaben">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="img_wrapper">
+                        <img class="img_hover" src="./filer/kobenhavnerbilleder-sten-simons.jpg" alt="lukket">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="section_1">
+            <div class="container rating text-bright">
+                <div class="grid ">
+                    <div class="col-12">
+                        <h3>Anmeldelser</h3>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <p class="bold">5 af 6 stjerner</p>
+                        <p>Københavnerbilleder er en grundig introduktion til at skyde
+                            billeder med retro-kant. Hvad enten du er har arbejdet med
+                            foto siden 135-filmen kom på markedet, du kun har skudt
+                            digitalt eller er helt nybegynder, er der masser af tips og
+                            tricks i bogen.</p>
+                        <p class="italic">Hanne Hovgaard, Berlingeren</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <p class="bold">4 af 5 stjerner</p>
+                        <p>Teksten er underholdende, og billederne er sku’ flotte.
+                            Hvad mere skal man sige om en fotobog?.</p>
+                        <p class="italic">Kim Kloggaard, Fotojournalen.dk</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <p class="bold">6 af 6 stjerner</p>
+                        <p>Sten Simons kan det der - og han bliver bedre og bedre.
+                            Stens tredje fotobog er klart den bedste - her er han for
+                            alvor i sit rette element, meget bedre end
+                            “studiefotografering som begyndere.” Tillykke - godt
+                            arbejde.</p>
+                        <p class="italic">Volmer Hansen, Lukkertiden.dk</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="grid">
+                <div class="col-12">
+                    <h2>Bogens kapitler</h2>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 ">
+                    <h3>Kapitel 1 - Intro til street foto</h3>
+                    <div>
+                        Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens
+                        geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street
+                        foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en
+                        masse gode eksempler på street fotos.
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6">
+                    <h3>Kapitel 2 - Om at skyde street</h3>
+                    <div>
+                        Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og
+                        prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder
+                        street. Uanset om du er begynder eller professionel, er der mange gode tekniske
+                        tips og tricks til street-skyderiet.
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6">
+                    <h3>Kapitel 3 - Om at finde det rette motiv</h3>
+                    <div>
+                        De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen
+                        teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får
+                        du en række tips og tricks til digital street-foto.
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div>
+                        <h3> Kapitel 4 - Digital street foto</h3>
+                        <div>
+                            Indimellem er man heldig, andre gange kommer man hjem helt uden gode
+                            motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen
+                            gevaldigt for at fange de gode motiver.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div>
+                        <h3>Kapitel 5 - Analog street foto</h3>
+                        <div>
+                            Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det
+                            signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til
+                            analog street foto. I dette kapitel får du en række tips og tricks til analog street-
+                            foto.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div>
+                        <h3> Kapitel 6 - Om at skyde sort/hvid</h3>
+                        <div>
+                            Indimellem er man heldig, andre gange kommer man hjem helt uden gode
+                            motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen
+                            gevaldigt for at fange de gode motiver.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div>
+                        <h3>Kapitel 7 - Kreative teknikker</h3>
+                        <div>
+                            Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver,
+                            gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine
+                            fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde
+                            kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div>
+                        <h3>Kapitel 8 - Kom helt tæt på!</h3>
+                        <div>
+                            Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på
+                            fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det
+                            der vil gøre dig til en bedre street-fotograf…
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <section id="section_2">
+                <div class="container">
+                    <div class="grid">
+                        <div class="col-12 col-md-start-4 col-md-3">
+                            <img src="./filer/sten_simons.jpg" alt="sten-simons">
+                        </div>
+
+                        <div class="col-12 col-md-start-7 col-md-4">
+                            <h3>Forfatteren</h3>
+                            <p>Sten Simons har en lang foto-karriere bag sig. Det
+                                hele startede i 00’erne, da han gik rundt i
+                                Pisserenden for at fotografere ungdommens forfald.
+                                Det ledte til en række udstillinger, og blev senere til
+                                hans først fotobog “Ungdomsdruk - pinlige billeder
+                                fra nattelivet.”</p>
+                            <p>Derefter tog karrieren fart: Han blev fotojournalist og
+                                dokumenterede en masse dagligdagsstof fra
+                                Amager på dagbladet “Amagerkaneren.”
+                                Sideløbende begyndte han at undervise i foto, og
+                                har skrevet et utal af bøger, herunder bestsellerne
+                                Scener fra S-toget, Brun mad - en visuel odysse, og
+                                lærebogen Fotografering for evnesvage.</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <section id="section_3">
+            <div class="container">
+                <div class="grid ">
+                    <h2 class="col-12">
+                        Udvalgte billeder fra bogen
+                    </h2>
+
+                    <div class="col-12 col-md-3 gallery-images">
+                        <img src="./gallery/foraar-med-et-agfa-lebox-2-20.jpg" alt="foraar_2">
+                        <img src="./gallery/vinter-2021-med-lomo-smena-17.jpg" alt="vinter_17">
+                        <img src="./gallery/vinter-2021-med-lomo-smena-6.jpg" alt="vinter_6">
+                        <img src="./gallery/foraar-med-et-agfa-le-box-2021-17.jpg" alt="foraar_17">
+                        <img src="./gallery/kbh-by-night-3.jpg" alt="kbh_night_3">
+                        <img src="./gallery/orestad-til-islands-brygge-pentax-auto-110-24.jpg" alt="orestad_24">
+                        <img src="./gallery/agfa-genanvendeligt-kamera-35mm-film-2-7.jpg" alt="agfa_2-7">
+                    </div>
+
+                    <div class="col-12 col-md-3 gallery-images">
+                        <img src="./gallery/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg" alt="agfa_2-5">
+                        <img src="./gallery/agfa-genanvendeligt-kamera-35mm-11.jpg" alt="agfa_11">
+                        <img src="./gallery/agfa-genanvendeligt-kamera-35mm-8.jpg" alt="agfa_8">
+                        <img src="./gallery/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="agfa_5">
+                        <img src="./gallery/amarminoen-med-et-agfa-le-box-12.jpg" alt="amarminoen_12">
+                        <img src="./gallery/amarminoen-med-et-agfa-le-box-11.jpg" alt="amarminoen_11">
+                        <img src="./gallery/amarminoen-med-et-agfa-le-box-3.jpg" alt="amarminoen_3">
+                        <img src="./gallery/orestad-til-islands-brygge-pentax-auto-110-19.jpg" alt="orestad_19">
+                        <img src="./gallery/orestad-til-islands-brygge-pentax-auto-110-17.jpg" alt="orestad_17">
+                        <img src="./gallery/orestad-til-islands-brygge-pentax-auto-110-16.jpg" alt="orestad_16">
+                    </div>
+
+                    <div class="col-12 col-md-3 gallery-images">
+                        <img src="./gallery/orestad-til-islands-brygge-pentax-auto-110-14.jpg" alt="orestad_14">
+                        <img src="./gallery/orestad-til-islands-brygge-pentax-auto-110-12.jpg" alt="orestad_12">
+                        <img src="./gallery/orestad-til-islands-brygge-pentax-auto-110-8.jpg" alt="orestad_8">
+                        <img src="./gallery/orestad-til-islands-brygge-pentax-auto-110.jpg" alt="orestad_10">
+                        <img src="./gallery/lomo-smena-20.jpg" alt="lomo_smena_20">
+                        <img src="./gallery/lomo-smena-17.jpg" alt="lomo_smena_17">
+                        <img src="./gallery/lomo-smena-15.jpg" alt="lomo_smena_15">
+                        <img src="./gallery/tyk-taage-i-orestad.jpg" alt="tyk_taage">
+                    </div>
+
+                    <div class="col-12 col-md-3 gallery-images">
+                        <img src="./gallery/nikkormat-ft2-remiseparken-7.jpg" alt="nikkormat_7">
+                        <img src="./gallery/nikkormat-ft2-remiseparken-2.jpg" alt="nikkormat_2">
+                        <img src="./gallery/nikkormat-ft2-orestad-c-6.jpg" alt="nikkormat_6">
+                        <img src="./gallery/pinhole-objektiver-ved-eghjorten-3.jpg" alt="pinhole">
+                        <img src="./gallery/0008.jpg" alt="0008">
+                        <img src="./gallery/anamorfiske-landskaber-amager-faelled-4.jpg" alt="anamorfisk_4">
+                        <img src="./gallery/_6090022.jpeg" alt="6090022">
+                        <img src="./gallery/_6090016.jpeg" alt="6090016">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 col-md-start-4 col-md-3  book-image">
+                    <img src="./filer/kobenhavnerbilleder-sten-simons.jpg" alt="sten-simons">
+                    <p class="discount">10% rabat!</p>
+                </div>
+
+                <div class="col-12 col-md-start-7 col-md-4 bog_info ">
+                    <h3>Køb bogen!</h3>
+                    <p>Bogen er til salg i alle de store boghandler.</p>
+                    <p>Lige nu kan du få 10% online rabat ved at købe den
+                        i William Dams boghandel. Brug rabatkoden</p>
+                    <p class="italic">koebenhavnerbilleder</p>
+                    <div>
+                        <a href="https://www.williamdam.dk/"><button>Køb hos William Dam!</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </main>
     <!-- Main slut -->
 
     <!-- Footer -->
-    <footer class="container-full bg-dark text-bright">
+    <footer class=" container-full bg-dark text-bright">
         <div class="container text-center p-md">
             <p>Lavet med ❤️ af Stefan</p>
+            <p>Ⓒ 2025 Sten Simons & forlaget Mellem Linjerne</p>
         </div>
     </footer>
 
     <!-- Inkluderer scripts-->
     <script src="js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
